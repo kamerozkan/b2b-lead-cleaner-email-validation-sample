@@ -1,0 +1,110 @@
+{
+  "sourceIndex": 4,
+  "decision": "REVIEW",
+  "qualityScore": 85,
+  "primaryReason": "Quality score is below the ACCEPT threshold.",
+  "reasonCodes": [
+    "QUALITY_SCORE_NEEDS_REVIEW",
+    "EMAIL_ROLE_BASED"
+  ],
+  "fullName": "Outreach Team",
+  "title": "Marketing Operations",
+  "email": "hello@typeform.com",
+  "phone": null,
+  "linkedin": null,
+  "country": "Spain",
+  "city": "Barcelona",
+  "companyName": "Typeform",
+  "companyDomain": "typeform.com",
+  "industry": "SaaS Software",
+  "emailDomain": "typeform.com",
+  "emailStatus": "ROLE_BASED",
+  "mxStatus": "VALID",
+  "websiteStatus": "NOT_CHECKED",
+  "dedupeKey": "email:hello@typeform.com",
+  "duplicate": false,
+  "historicalDuplicate": false,
+  "normalizationTruncatedFields": [],
+  "evidence": {
+    "email": {
+      "syntaxValid": true,
+      "domain": "typeform.com",
+      "status": "ROLE_BASED",
+      "mx": {
+        "status": "VALID",
+        "records": [
+          {
+            "exchange": "aspmx.l.google.com",
+            "priority": 1
+          },
+          {
+            "exchange": "alt2.aspmx.l.google.com",
+            "priority": 5
+          },
+          {
+            "exchange": "alt1.aspmx.l.google.com",
+            "priority": 5
+          },
+          {
+            "exchange": "aspmx2.googlemail.com",
+            "priority": 10
+          },
+          {
+            "exchange": "aspmx3.googlemail.com",
+            "priority": 10
+          }
+        ],
+        "error": null
+      },
+      "mailboxExistence": "NOT_CLAIMED"
+    },
+    "company": {
+      "domain": "typeform.com",
+      "domainInferredFromEmail": false,
+      "website": {
+        "status": "NOT_CHECKED",
+        "httpStatus": null,
+        "finalUrl": null,
+        "error": null
+      }
+    }
+  },
+  "reasons": [
+    {
+      "code": "QUALITY_SCORE_NEEDS_REVIEW",
+      "severity": "REVIEW",
+      "penalty": 0,
+      "message": "Quality score is below the ACCEPT threshold.",
+      "evidence": {
+        "observed": 85,
+        "minimum": 90
+      }
+    },
+    {
+      "code": "EMAIL_ROLE_BASED",
+      "severity": "WARN",
+      "penalty": 15,
+      "message": "Email is a role-based inbox rather than a named person.",
+      "evidence": {
+        "localPart": "hello"
+      }
+    }
+  ],
+  "original": {
+    "name": "Outreach Team",
+    "position": "Marketing Operations",
+    "business_email": "hello@typeform.com",
+    "country_name": "Spain",
+    "city": "Barcelona",
+    "organization_name": "Typeform",
+    "website_url": "https://typeform.com/",
+    "category": "SaaS Software",
+    "scraped_at": "2026-07-14T11:20:00Z",
+    "sample_record": true
+  },
+  "originalPreserved": true,
+  "originalByteLength": 291,
+  "checkedAt": "2026-07-28T18:54:22.227Z",
+  "schemaVersion": "1.0"
+}
+

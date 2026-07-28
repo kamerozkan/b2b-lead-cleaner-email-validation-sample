@@ -1,0 +1,101 @@
+{
+  "sourceIndex": 6,
+  "decision": "REJECT",
+  "qualityScore": 30,
+  "primaryReason": "The same lead already appeared in this batch.",
+  "reasonCodes": [
+    "DUPLICATE_LEAD"
+  ],
+  "fullName": "Sample Duplicate",
+  "title": "Head of Growth",
+  "email": "redacted@stripe.com",
+  "phone": null,
+  "linkedin": null,
+  "country": "DE",
+  "city": "Berlin",
+  "companyName": "Stripe",
+  "companyDomain": "stripe.com",
+  "industry": "Payments Software",
+  "emailDomain": "stripe.com",
+  "emailStatus": "BUSINESS",
+  "mxStatus": "VALID",
+  "websiteStatus": "NOT_CHECKED",
+  "dedupeKey": "email:redacted@stripe.com",
+  "duplicate": true,
+  "historicalDuplicate": false,
+  "normalizationTruncatedFields": [],
+  "evidence": {
+    "email": {
+      "syntaxValid": true,
+      "domain": "stripe.com",
+      "status": "BUSINESS",
+      "mx": {
+        "status": "VALID",
+        "records": [
+          {
+            "exchange": "aspmx.l.google.com",
+            "priority": 10
+          },
+          {
+            "exchange": "alt1.aspmx.l.google.com",
+            "priority": 20
+          },
+          {
+            "exchange": "alt2.aspmx.l.google.com",
+            "priority": 20
+          },
+          {
+            "exchange": "aspmx3.googlemail.com",
+            "priority": 30
+          },
+          {
+            "exchange": "aspmx2.googlemail.com",
+            "priority": 30
+          }
+        ],
+        "error": null
+      },
+      "mailboxExistence": "NOT_CLAIMED"
+    },
+    "company": {
+      "domain": "stripe.com",
+      "domainInferredFromEmail": false,
+      "website": {
+        "status": "NOT_CHECKED",
+        "httpStatus": null,
+        "finalUrl": null,
+        "error": null
+      }
+    }
+  },
+  "reasons": [
+    {
+      "code": "DUPLICATE_LEAD",
+      "severity": "REJECT",
+      "penalty": 70,
+      "message": "The same lead already appeared in this batch.",
+      "evidence": {
+        "firstIndex": 1,
+        "key": "email:redacted@stripe.com"
+      }
+    }
+  ],
+  "original": {
+    "full_name": "Sample Duplicate",
+    "job_title": "Head of Growth",
+    "work_email": "redacted@stripe.com",
+    "country_code": "DE",
+    "contact_city": "Berlin",
+    "company_name": "Stripe",
+    "company_website": "https://stripe.com",
+    "company_industry": "Payments Software",
+    "verified_at": "2026-07-09T08:30:00Z",
+    "sample_record": true,
+    "identity_redacted_for_public_sample": true
+  },
+  "originalPreserved": false,
+  "originalByteLength": 308,
+  "checkedAt": "2026-07-28T18:54:22.227Z",
+  "schemaVersion": "1.0"
+}
+

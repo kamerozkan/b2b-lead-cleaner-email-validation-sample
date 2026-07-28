@@ -1,0 +1,103 @@
+{
+  "maxItems": 7,
+  "qualityMode": "BALANCED",
+  "rows": [
+    {
+      "full_name": "Maya Chen",
+      "job_title": "VP Growth",
+      "email": "maya.chen@apify.com",
+      "company_name": "Apify",
+      "company_domain": "apify.com",
+      "country": "Czechia",
+      "city": "Prague",
+      "industry": "Software",
+      "sample_record": true
+    },
+    {
+      "full_name": "Daniel Brooks",
+      "job_title": "Marketing Director",
+      "email": "daniel.brooks@hubspot.com",
+      "company_name": "HubSpot",
+      "company_domain": "hubspot.com",
+      "country": "United States",
+      "city": "Cambridge",
+      "industry": "SaaS Software",
+      "sample_record": true
+    },
+    {
+      "full_name": "Lea Wagner",
+      "job_title": "Head of Revenue Operations",
+      "email": "lea.wagner@intercom.com",
+      "company_name": "Intercom",
+      "company_domain": "intercom.com",
+      "country": "United States",
+      "city": "San Francisco",
+      "industry": "Customer Messaging Software",
+      "sample_record": true
+    },
+    {
+      "full_name": "Oliver Reed",
+      "job_title": "Demand Generation Director",
+      "email": "oliver.reed@stripe.com",
+      "company_name": "Stripe",
+      "company_domain": "stripe.com",
+      "country": "United States",
+      "city": "San Francisco",
+      "industry": "Financial Technology Software",
+      "sample_record": true
+    },
+    {
+      "full_name": "Lena Hoffmann",
+      "job_title": "VP Marketing",
+      "email": "lena.hoffmann@personio.de",
+      "company_name": "Personio",
+      "company_domain": "personio.de",
+      "country": "Germany",
+      "city": "Berlin",
+      "industry": "HR Software",
+      "sample_record": true
+    },
+    {
+      "full_name": "Avery Brooks",
+      "job_title": "VP Marketing",
+      "company_name": "OpenAI",
+      "country": "United States",
+      "city": "San Francisco",
+      "industry": "Artificial Intelligence Software",
+      "sample_record": true
+    },
+    {
+      "full_name": "Ethan Clark",
+      "job_title": "Sales Operations Director",
+      "email": "ethan.clark@gmail.com",
+      "company_name": "Slack",
+      "company_domain": "slack.com",
+      "country": "United States",
+      "city": "San Francisco",
+      "industry": "Software",
+      "sample_record": true
+    }
+  ],
+  "rules": {
+    "requireEmail": false,
+    "sourceCostUsd": 70
+  },
+  "targeting": {
+    "countries": [
+      "Czechia",
+      "United States",
+      "Germany"
+    ],
+    "industries": [
+      "Software"
+    ],
+    "titleKeywords": [
+      "VP",
+      "Marketing Director",
+      "Revenue Operations",
+      "Demand Generation",
+      "Sales Operations"
+    ]
+  }
+}
+

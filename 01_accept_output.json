@@ -1,0 +1,72 @@
+{
+  "sourceIndex": 0,
+  "decision": "ACCEPT",
+  "qualityScore": 100,
+  "primaryReason": null,
+  "reasonCodes": [],
+  "fullName": "Sofia Bennett (sample)",
+  "title": "VP Sales",
+  "email": "apify-task-demo-401@hubspot.com",
+  "phone": "+1 202-555-0101",
+  "linkedin": "https://www.linkedin.com/in/apify-task-demo-401",
+  "country": "United States",
+  "city": "Boston",
+  "companyName": "HubSpot",
+  "companyDomain": "hubspot.com",
+  "industry": "Software",
+  "emailDomain": "hubspot.com",
+  "emailStatus": "BUSINESS",
+  "mxStatus": "VALID",
+  "websiteStatus": "NOT_CHECKED",
+  "dedupeKey": "email:apify-task-demo-401@hubspot.com",
+  "duplicate": false,
+  "historicalDuplicate": false,
+  "normalizationTruncatedFields": [],
+  "evidence": {
+    "email": {
+      "syntaxValid": true,
+      "domain": "hubspot.com",
+      "status": "BUSINESS",
+      "mx": {
+        "status": "VALID",
+        "records": [
+          {
+            "exchange": "smtp.google.com",
+            "priority": 1
+          }
+        ],
+        "error": null
+      },
+      "mailboxExistence": "NOT_CLAIMED"
+    },
+    "company": {
+      "domain": "hubspot.com",
+      "domainInferredFromEmail": false,
+      "website": {
+        "status": "NOT_CHECKED",
+        "httpStatus": null,
+        "finalUrl": null,
+        "error": null
+      }
+    }
+  },
+  "reasons": [],
+  "original": {
+    "full_name": "Sofia Bennett (sample)",
+    "job_title": "VP Sales",
+    "email": "apify-task-demo-401@hubspot.com",
+    "phone": "+1 202-555-0101",
+    "linkedin": "https://www.linkedin.com/in/apify-task-demo-401",
+    "country": "United States",
+    "city": "Boston",
+    "company_name": "HubSpot",
+    "company_domain": "hubspot.com",
+    "industry": "Software",
+    "updated_at": "2026-07-20T12:00:00Z"
+  },
+  "originalPreserved": true,
+  "originalByteLength": 346,
+  "checkedAt": "2026-07-28T18:35:31.969Z",
+  "schemaVersion": "1.0"
+}
+

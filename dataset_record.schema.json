@@ -1,0 +1,463 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Delivered B2B lead QA decision",
+  "description": "One explained decision for one delivered source row. Duplicate rows remain present and are flagged and rejected rather than deleted.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "sourceIndex": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Zero-based source position, including the requested offset."
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "ACCEPT",
+        "REVIEW",
+        "REJECT"
+      ]
+    },
+    "qualityScore": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Rule-based score. It is not an email deliverability probability."
+    },
+    "primaryReason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reasonCodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/reasonCode"
+      }
+    },
+    "fullName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "email": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Normalized source value. Ownership is not verified."
+    },
+    "linkedin": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Normalized source value. Profile ownership or employment is not verified."
+    },
+    "country": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "city": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "companyName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "companyDomain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "industry": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "emailDomain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "emailStatus": {
+      "$ref": "#/definitions/emailStatus"
+    },
+    "mxStatus": {
+      "$ref": "#/definitions/mxStatus"
+    },
+    "websiteStatus": {
+      "$ref": "#/definitions/websiteStatus"
+    },
+    "dedupeKey": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Normalized duplicate-comparison key. It can contain personal data."
+    },
+    "duplicate": {
+      "type": "boolean"
+    },
+    "historicalDuplicate": {
+      "type": "boolean"
+    },
+    "normalizationTruncatedFields": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "fullName",
+          "title",
+          "email",
+          "phone",
+          "linkedin",
+          "country",
+          "city",
+          "companyName",
+          "companyDomain",
+          "industry",
+          "updatedAt"
+        ]
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "email": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "syntaxValid": {
+              "type": "boolean"
+            },
+            "domain": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "status": {
+              "$ref": "#/definitions/emailStatus"
+            },
+            "mx": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "$ref": "#/definitions/mxStatus"
+                },
+                "records": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "exchange": {
+                        "type": "string"
+                      },
+                      "priority": {
+                        "type": "number"
+                      },
+                      "implicit": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "exchange",
+                      "priority"
+                    ]
+                  }
+                },
+                "error": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "status",
+                "records",
+                "error"
+              ]
+            },
+            "mailboxExistence": {
+              "type": "string",
+              "enum": [
+                "NOT_CLAIMED"
+              ],
+              "description": "No SMTP mailbox-existence check is performed."
+            }
+          },
+          "required": [
+            "syntaxValid",
+            "domain",
+            "status",
+            "mx",
+            "mailboxExistence"
+          ]
+        },
+        "company": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "domain": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "domainInferredFromEmail": {
+              "type": "boolean"
+            },
+            "website": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "$ref": "#/definitions/websiteStatus"
+                },
+                "httpStatus": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "finalUrl": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "error": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "status",
+                "httpStatus",
+                "finalUrl",
+                "error"
+              ]
+            }
+          },
+          "required": [
+            "domain",
+            "domainInferredFromEmail",
+            "website"
+          ]
+        }
+      },
+      "required": [
+        "email",
+        "company"
+      ]
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "$ref": "#/definitions/reasonCode"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "REJECT",
+              "REVIEW",
+              "WARN"
+            ]
+          },
+          "penalty": {
+            "type": "number",
+            "minimum": 0
+          },
+          "message": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "code",
+          "severity",
+          "penalty",
+          "message",
+          "evidence"
+        ]
+      }
+    },
+    "original": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "originalPreserved": {
+      "type": "boolean"
+    },
+    "originalByteLength": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "checkedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "enum": [
+        "1.0"
+      ]
+    }
+  },
+  "required": [
+    "sourceIndex",
+    "decision",
+    "qualityScore",
+    "primaryReason",
+    "reasonCodes",
+    "fullName",
+    "title",
+    "email",
+    "phone",
+    "linkedin",
+    "country",
+    "city",
+    "companyName",
+    "companyDomain",
+    "industry",
+    "emailDomain",
+    "emailStatus",
+    "mxStatus",
+    "websiteStatus",
+    "dedupeKey",
+    "duplicate",
+    "historicalDuplicate",
+    "normalizationTruncatedFields",
+    "evidence",
+    "reasons",
+    "original",
+    "originalPreserved",
+    "originalByteLength",
+    "checkedAt",
+    "schemaVersion"
+  ],
+  "definitions": {
+    "emailStatus": {
+      "type": "string",
+      "enum": [
+        "MISSING",
+        "INVALID",
+        "DISPOSABLE",
+        "PERSONAL",
+        "ROLE_BASED",
+        "BUSINESS"
+      ]
+    },
+    "mxStatus": {
+      "type": "string",
+      "enum": [
+        "NOT_CHECKED",
+        "VALID",
+        "IMPLICIT_MX",
+        "NO_MX",
+        "UNKNOWN"
+      ]
+    },
+    "websiteStatus": {
+      "type": "string",
+      "enum": [
+        "NOT_CHECKED",
+        "UNSAFE",
+        "REACHABLE",
+        "SERVER_ERROR",
+        "UNREACHABLE",
+        "UNKNOWN"
+      ]
+    },
+    "reasonCode": {
+      "type": "string",
+      "enum": [
+        "COUNTRY_MISSING",
+        "COUNTRY_MISMATCH",
+        "CITY_MISSING",
+        "CITY_MISMATCH",
+        "TITLE_MISSING",
+        "TITLE_MISMATCH",
+        "TITLE_EXCLUDED",
+        "INDUSTRY_MISSING",
+        "INDUSTRY_MISMATCH",
+        "EMAIL_MISSING",
+        "EMAIL_MISSING_OPTIONAL",
+        "EMAIL_INVALID_SYNTAX",
+        "EMAIL_DISPOSABLE",
+        "EMAIL_PERSONAL",
+        "EMAIL_ROLE_BASED",
+        "COMPANY_DOMAIN_INFERRED",
+        "EMAIL_COMPANY_DOMAIN_MISMATCH",
+        "EMAIL_DOMAIN_NO_MX",
+        "EMAIL_MX_UNCERTAIN",
+        "EMAIL_IMPLICIT_MX",
+        "COMPANY_DOMAIN_MISSING",
+        "COMPANY_DOMAIN_TARGET_MISSING",
+        "COMPANY_DOMAIN_MISMATCH",
+        "COMPANY_WEBSITE_UNREACHABLE",
+        "COMPANY_WEBSITE_UNCERTAIN",
+        "FRESHNESS_EVIDENCE_MISSING",
+        "FRESHNESS_TIMESTAMP_IN_FUTURE",
+        "LEAD_STALE",
+        "DEDUPE_KEY_MISSING",
+        "DUPLICATE_LEAD",
+        "HISTORICAL_DUPLICATE",
+        "FIELD_VALUE_TRUNCATED",
+        "ORIGINAL_TOO_LARGE",
+        "QUALITY_SCORE_TOO_LOW",
+        "QUALITY_SCORE_NEEDS_REVIEW"
+      ]
+    }
+  }
+}
+

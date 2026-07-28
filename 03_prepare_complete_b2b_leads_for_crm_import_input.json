@@ -1,0 +1,72 @@
+{
+  "maxItems": 5,
+  "qualityMode": "BALANCED",
+  "rows": [
+    {
+      "full_name": "Sofia Bennett (sample)",
+      "job_title": "VP Sales",
+      "email": "apify-task-demo-401@hubspot.com",
+      "phone": "+1 202-555-0101",
+      "linkedin": "https://www.linkedin.com/in/apify-task-demo-401",
+      "country": "United States",
+      "city": "Boston",
+      "company_name": "HubSpot",
+      "company_domain": "hubspot.com",
+      "industry": "Software",
+      "updated_at": "2026-07-20T12:00:00Z"
+    },
+    {
+      "full_name": "Marcus Reed (sample)",
+      "job_title": "Revenue Operations Manager",
+      "email": "apify-task-demo-402@stripe.com",
+      "phone": "+1 202-555-0102",
+      "linkedin": "https://www.linkedin.com/in/apify-task-demo-402",
+      "country": "United States",
+      "city": "San Francisco",
+      "company_name": "Stripe",
+      "company_domain": "stripe.com",
+      "industry": "Financial Technology",
+      "updated_at": "2026-07-20T12:00:00Z"
+    },
+    {
+      "full_name": "Priya Nair (sample)",
+      "job_title": "Head of Growth",
+      "email": "apify-task-demo-403@canva.com",
+      "phone": "+61 2 5550 0103",
+      "linkedin": "https://www.linkedin.com/in/apify-task-demo-403",
+      "country": "Australia",
+      "city": "Sydney",
+      "company_name": "Canva",
+      "company_domain": "canva.com",
+      "industry": "Software",
+      "updated_at": "2026-07-20T12:00:00Z"
+    },
+    {
+      "full_name": "Daniel Kim (sample)",
+      "job_title": "Sales Director",
+      "email": "apify-task-demo-404@asana.com",
+      "phone": "+1 202-555-0104",
+      "linkedin": "https://www.linkedin.com/in/apify-task-demo-404",
+      "country": "United States",
+      "city": "New York",
+      "company_name": "Asana",
+      "company_domain": "asana.com",
+      "industry": "SaaS",
+      "updated_at": "2026-07-20T12:00:00Z"
+    },
+    {
+      "full_name": "Lena Fischer (sample)",
+      "job_title": "VP Marketing",
+      "email": "apify-task-demo-405@slack.com",
+      "phone": "+49 30 5550 0105",
+      "linkedin": "https://www.linkedin.com/in/apify-task-demo-405",
+      "country": "Germany",
+      "city": "Berlin",
+      "company_name": "Slack",
+      "company_domain": "slack.com",
+      "industry": "Software",
+      "updated_at": "2026-07-20T12:00:00Z"
+    }
+  ]
+}
+

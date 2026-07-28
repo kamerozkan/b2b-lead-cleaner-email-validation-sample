@@ -1,0 +1,107 @@
+{
+  "maxItems": 7,
+  "qualityMode": "BALANCED",
+  "rows": [
+    {
+      "full_name": "Maya Chen",
+      "job_title": "VP Marketing",
+      "work_email": "maya.chen@hubspot.com",
+      "phone_number": "+1 617 555 0142",
+      "country_code": "US",
+      "contact_city": "Boston",
+      "company_name": "HubSpot",
+      "company_website": "https://www.hubspot.com",
+      "company_industry": "SaaS Software",
+      "verified_at": "2026-07-12T10:00:00Z",
+      "sample_record": true
+    },
+    {
+      "fullName": "Lucas Meyer",
+      "title": "Head of Growth",
+      "email": "lucas.meyer@stripe.com",
+      "country": "Germany",
+      "city": "Berlin",
+      "companyName": "Stripe",
+      "companyDomain": "stripe.com",
+      "industry": "Payments Software",
+      "updatedAt": "2026-07-09T08:30:00.000Z",
+      "sample_record": true
+    },
+    {
+      "contact": {
+        "name": "Priya Nair",
+        "jobTitle": "Demand Generation Director",
+        "email": "priya.nair@asana.com",
+        "phone": "+44 20 7946 0213"
+      },
+      "location": {
+        "country": "UK",
+        "city": "London"
+      },
+      "organization": {
+        "name": "Asana",
+        "industry": "Work Management Software"
+      },
+      "verified_at": "2026-07-15T13:45:00Z",
+      "sample_record": true
+    },
+    {
+      "person": {
+        "fullName": "Noah Bennett",
+        "jobTitle": "CMO",
+        "email": "  NOAH.BENNETT@INTERCOM.COM  ",
+        "country": "United States",
+        "city": "San Francisco"
+      },
+      "employment": {
+        "company": "Intercom"
+      },
+      "organization": {
+        "domain": "intercom.com",
+        "industry": "Customer Messaging Software"
+      },
+      "timestamp": "2026-07-17T09:15:00Z",
+      "sample_record": true
+    },
+    {
+      "name": "Outreach Team",
+      "position": "Marketing Operations",
+      "business_email": "hello@typeform.com",
+      "country_name": "Spain",
+      "city": "Barcelona",
+      "organization_name": "Typeform",
+      "website_url": "https://typeform.com/",
+      "category": "SaaS Software",
+      "scraped_at": "2026-07-14T11:20:00Z",
+      "sample_record": true
+    },
+    {
+      "first_name": "Anna",
+      "last_name": "Keller",
+      "current_title": "VP Demand Generation",
+      "email_address": "anna.keller@personio.de",
+      "country": "DE",
+      "city": "Munich",
+      "company": "Personio",
+      "domain": "personio.de",
+      "industry": "HR Software",
+      "sample_record": true
+    },
+    {
+      "full_name": "Lucas Meyer duplicate",
+      "job_title": "Head of Growth",
+      "work_email": "lucas.meyer@stripe.com",
+      "country_code": "DE",
+      "contact_city": "Berlin",
+      "company_name": "Stripe",
+      "company_website": "https://stripe.com",
+      "company_industry": "Payments Software",
+      "verified_at": "2026-07-09T08:30:00Z",
+      "sample_record": true
+    }
+  ],
+  "rules": {
+    "acceptScore": 90
+  }
+}
+
