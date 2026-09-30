@@ -1,6 +1,10 @@
 **Live Actor and maintained API: [Run B2B Lead Cleaner on Apify](https://apify.com/kamerozkan/b2b-lead-cleaner)**
 
-# B2B Lead Cleaner: Domain-Level Email and MX Validation Samples
+# Bulk Email Verifier - MX Checks & B2B Lead Cleaner: Samples
+
+Bulk email verifier and B2B lead list cleaner with domain-level syntax and MX checks. Flag disposable, personal and role inboxes, deduplicate leads and apply ICP rules. Return explained ACCEPT, REVIEW or REJECT decisions for CRM imports. No SMTP checks or mailbox verification.
+
+[Run Bulk Email Verifier - MX Checks & B2B Lead Cleaner on Apify](https://apify.com/kamerozkan/b2b-lead-cleaner)
 
 [![Actor](https://img.shields.io/badge/Apify-Run%20Actor-00a86b)](https://apify.com/kamerozkan/b2b-lead-cleaner)
 [![Schema](https://img.shields.io/badge/schema-v1.0-2563eb)](dataset_record.schema.json)

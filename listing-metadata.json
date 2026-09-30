@@ -1,0 +1,15 @@
+{
+  "id": "Fu5NBEXHS03Hwcaiz",
+  "name": "b2b-lead-cleaner",
+  "title": "Bulk Email Verifier - MX Checks & B2B Lead Cleaner",
+  "description": "Bulk email verifier and B2B lead list cleaner with domain-level syntax and MX checks. Flag disposable, personal and role inboxes, deduplicate leads and apply ICP rules. Return explained ACCEPT, REVIEW or REJECT decisions for CRM imports. No SMTP checks or mailbox verification.",
+  "seoTitle": "Bulk Email Verifier - MX & B2B Lead List Cleaning",
+  "seoDescription": "Clean B2B lead lists with bulk email syntax and MX checks, disposable inbox flags, deduplication and explained decisions. No SMTP or mailbox verification.",
+  "isPublic": true,
+  "url": "https://apify.com/kamerozkan/b2b-lead-cleaner",
+  "checkedAt": "2026-09-30",
+  "changeScope": "listing metadata and sample documentation only",
+  "runtimeChanged": false,
+  "schemasChanged": false,
+  "examplesRegenerated": false
+}
